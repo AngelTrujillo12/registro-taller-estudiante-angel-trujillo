@@ -1,0 +1,5 @@
+node_modules/
+.env
+registro_taller.db
+registro_taller.db-shm
+registro_taller.db-wal

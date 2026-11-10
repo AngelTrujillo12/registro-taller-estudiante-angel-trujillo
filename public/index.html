@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Taller [Angel Trujillo]</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="container">
+        <header class="terminal-header">
+            <h1>> SISTEMA DE REGISTRO</h1>
+            <p>OPERADOR: Angel Trujillo | ACCESO AUTORIZADO</p>
+        </header>
+
+        <!-- Formulario -->
+        <section class="card">
+            <h2>[ NUEVA INSCRIPCIÓN ]</h2>
+            <form id="formulario-registro" class="formulario-grid">
+                <div class="campo">
+                    <label for="nombre">NOMBRE COMPLETO</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Ej. Angel Trujillo" required>
+                </div>
+                <div class="campo">
+                    <label for="correo">CORREO ELECTRÓNICO</label>
+                    <input type="email" id="correo" name="correo" placeholder="Ej. angel@gmail.com" required>
+                </div>
+                <div class="campo">
+                    <label for="telefono">TELÉFONO</label>
+                    <input type="tel" id="telefono" name="telefono" placeholder="Ej. 5555-1234" required>
+                </div>
+                <div class="campo">
+                    <label for="taller">TALLER</label>
+                    <select id="taller" name="taller" required>
+                        <option value="">-- SELECCIONAR TALLER --</option>
+                        <option value="Desarrollo Web">Desarrollo Web</option>
+                        <option value="Node.js y Express">Node.js y Express</option>
+                        <option value="Git y GitHub">Git y GitHub</option>
+                    </select>
+                </div>
+                <div class="campo">
+                    <label for="horario">HORARIO</label>
+                    <select id="horario" name="horario" required>
+                        <option value="">-- SELECCIONAR HORARIO --</option>
+                        <option value="Mañana">Mañana</option>
+                        <option value="Tarde">Tarde</option>
+                        <option value="Noche">Noche</option>
+                    </select>
+                </div>
+                <div class="campo">
+                    <label for="modalidad">MODALIDAD</label>
+                    <select id="modalidad" name="modalidad" required>
+                        <option value="">-- SELECCIONAR OPCIÓN --</option>
+                        <option value="Presencial">Presencial</option>
+                        <option value="Virtual">Virtual</option>
+                    </select>
+                </div>
+                <div class="campo">
+                    <label for="nivel_experiencia">EXPERIENCIA PREVIA</label>
+                    <select id="nivel_experiencia" name="nivel_experiencia" required>
+                        <option value="">-- SELECCIONAR NIVEL --</option>
+                        <option value="Inicial">Inicial</option>
+                        <option value="Intermedio">Intermedio</option>
+                        <option value="Avanzado">Avanzado</option>
+                    </select>
+                </div>
+                <div class="campo span-2">
+                    <button type="submit">[ EJECUTAR REGISTRO ]</button>
+                </div>
+            </form>
+            <p id="mensaje" class="terminal-msg"></p>
+        </section>
+
+        <!-- Lista -->
+        <section class="card">
+            <h2>[ PARTICIPANTES REGISTRADOS EN LA RED ]</h2>
+            <div id="lista-inscripciones"></div>
+        </section>
+
+        <!-- Reportes -->
+        <section class="resumen">
+            <article class="tarjeta">
+                <h2>TOTAL REGISTROS</h2>
+                <p id="total" class="numero-total">0</p>
+            </article>
+            <article class="tarjeta">
+                <h2>POR TALLER</h2>
+                <ul id="reporte-talleres"></ul>
+            </article>
+            <article class="tarjeta">
+                <h2>POR HORARIO</h2>
+                <ul id="reporte-horarios"></ul>
+            </article>
+            <article class="tarjeta">
+                <h2>POR MODALIDAD</h2>
+                <ul id="reporte-modalidades"></ul>
+            </article>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>

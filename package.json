@@ -1,0 +1,13 @@
+{
+  "name": "registro-taller-angel",
+  "version": "1.0.0",
+  "description": "Sistema de registro de participantes para taller",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "sqlite3": "^6.0.1"
+  }
+}
